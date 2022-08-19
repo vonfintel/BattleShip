@@ -150,17 +150,17 @@ namespace BattleShip.GameBoard
                 Console.WriteLine("Invalid coordinates (A1, B2 etc)");
             }
             else {
-                if (isOccupied(charInput.GetValueOrDefault(userInput[0]), userInputConversion))
+                if (isOccupied(charInput.GetValueOrDefault(char.ToLower(userInput[0])), userInputConversion))
                 {
-                    Gamingboard[charInput.GetValueOrDefault(userInput[0]), userInputConversion] = '|';
+                    Gamingboard[charInput.GetValueOrDefault(char.ToLower(userInput[0])), userInputConversion] = '|';
                     Console.WriteLine("Hit");
-                    winCondition--;
+                    winCondition --;
                     
                 }
                 else {
 
 
-                    Gamingboard[charInput.GetValueOrDefault(userInput[0]), userInputConversion] = 'x';
+                    Gamingboard[charInput.GetValueOrDefault(char.ToLower(userInput[0])), userInputConversion] = 'x';
                     Console.WriteLine("Miss");
                 }
                 
